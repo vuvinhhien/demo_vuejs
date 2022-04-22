@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import UserProfile from "@/views/UserProfile.vue";
+import UserDetail from "@/views/UserDetail.vue";
 
 Vue.use(VueRouter);
 
@@ -18,6 +20,14 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+  },
+  {
+    path: "/user/:id",
+    name: "userDetail",
+    // component: () =>
+    //   import(/* webpackChunkName: "about" */ "../views/UserDetail.vue"),
+    component: UserDetail,
+    children: [{ path: "profile", component: UserProfile }],
   },
 ];
 

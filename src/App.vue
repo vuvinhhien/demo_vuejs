@@ -4,6 +4,7 @@
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/user/johndoe">User John doe</router-link>
+      <router-link to="/advanced-topic">Advanced topic</router-link>
     </nav>
     <div><router-view /></div>
   </div>
@@ -15,6 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  width: 100%;
 }
 
 nav {

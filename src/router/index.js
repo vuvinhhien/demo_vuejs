@@ -6,6 +6,7 @@ import CustomFilter from "@/views/AdvancedTopicView/CustomFilter";
 import CustomDirective from "@/views/AdvancedTopicView/CustomDirective";
 import ResuableComponent from "@/views/AdvancedTopicView/ResuableComponent";
 import TwoWaysBindingComponent from "@/views/AdvancedTopicView/TwoWaysBindingComponent";
+import UsingAxios from "@/views/AdvancedTopicView/UsingAxios";
 
 Vue.use(VueRouter);
 
@@ -29,6 +30,7 @@ const routes = [
       { path: "custom-directive", component: CustomDirective },
       { path: "resuable-component", component: ResuableComponent },
       { path: "twoways-binding", component: TwoWaysBindingComponent },
+      { path: "using-axios", component: UsingAxios },
     ],
   },
   {

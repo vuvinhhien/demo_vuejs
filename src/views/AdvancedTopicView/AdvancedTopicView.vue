@@ -31,6 +31,10 @@ export default {
           to: `/advanced-topic/twoways-binding`,
           content: "Two ways binding custom component",
         },
+        {
+          to: `/advanced-topic/using-axios`,
+          content: "Using axios component",
+        },
       ],
     };
   },

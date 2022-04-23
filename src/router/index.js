@@ -3,6 +3,9 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import UserProfile from "@/views/UserProfile.vue";
 import CustomFilter from "@/views/AdvancedTopicView/CustomFilter";
+import CustomDirective from "@/views/AdvancedTopicView/CustomDirective";
+import ResuableComponent from "@/views/AdvancedTopicView/ResuableComponent";
+import TwoWaysBindingComponent from "@/views/AdvancedTopicView/TwoWaysBindingComponent";
 
 Vue.use(VueRouter);
 
@@ -15,16 +18,18 @@ const routes = [
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import("../views/AboutView.vue"),
   },
   {
     path: "/advanced-topic",
     name: "advanced",
     component: () => import("../views/AdvancedTopicView/AdvancedTopicView.vue"),
-    children: [{ path: "custom-filter", component: CustomFilter }],
+    children: [
+      { path: "custom-filter", component: CustomFilter },
+      { path: "custom-directive", component: CustomDirective },
+      { path: "resuable-component", component: ResuableComponent },
+      { path: "twoways-binding", component: TwoWaysBindingComponent },
+    ],
   },
   {
     path: "/user/:id",

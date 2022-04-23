@@ -17,7 +17,19 @@ export default {
       links: [
         {
           to: `/advanced-topic/custom-filter`,
-          content: "Custom filter and vue-moment filter component",
+          content: "Custom filter and vue-moment filter",
+        },
+        {
+          to: `/advanced-topic/custom-directive`,
+          content: "Custom directive",
+        },
+        {
+          to: `/advanced-topic/resuable-component`,
+          content: "Resuable button component",
+        },
+        {
+          to: `/advanced-topic/twoways-binding`,
+          content: "Two ways binding custom component",
         },
       ],
     };

@@ -35,6 +35,10 @@ export default {
           to: `/advanced-topic/using-axios`,
           content: "Using axios component",
         },
+        {
+          to: `/advanced-topic/form-vuetify`,
+          content: "Using vuetify for form validation",
+        },
       ],
     };
   },

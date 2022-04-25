@@ -7,6 +7,7 @@ import CustomDirective from "@/views/AdvancedTopicView/CustomDirective";
 import ResuableComponent from "@/views/AdvancedTopicView/ResuableComponent";
 import TwoWaysBindingComponent from "@/views/AdvancedTopicView/TwoWaysBindingComponent";
 import UsingAxios from "@/views/AdvancedTopicView/UsingAxios";
+import FormVuetify from "@/views/AdvancedTopicView/FormVuetify";
 
 Vue.use(VueRouter);
 
@@ -31,6 +32,7 @@ const routes = [
       { path: "resuable-component", component: ResuableComponent },
       { path: "twoways-binding", component: TwoWaysBindingComponent },
       { path: "using-axios", component: UsingAxios },
+      { path: "form-vuetify", component: FormVuetify },
     ],
   },
   {

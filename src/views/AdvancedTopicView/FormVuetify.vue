@@ -7,6 +7,7 @@
           v-slot="{ errors }"
           name="Name"
           rules="required|max:10"
+          :debounce="600"
         >
           <v-text-field
             v-model="name"
@@ -19,6 +20,7 @@
         <validation-provider
           v-slot="{ errors }"
           name="phoneNumber"
+          :debounce="600"
           :rules="{
             required: true,
             digits: 7,
@@ -37,15 +39,22 @@
           v-slot="{ errors }"
           name="email"
           rules="required|email|checkEmailExist"
+          :debounce="600"
         >
           <v-text-field
             v-model="email"
             :error-messages="errors"
+            da
             label="E-mail"
             required
           ></v-text-field>
         </validation-provider>
-        <validation-provider v-slot="{ errors }" name="select" rules="required">
+        <validation-provider
+          v-slot="{ errors }"
+          name="select"
+          rules="required"
+          :debounce="600"
+        >
           <v-select
             v-model="select"
             :items="items"
@@ -59,6 +68,7 @@
           v-slot="{ errors }"
           rules="required"
           name="checkbox"
+          :debounce="600"
         >
           <v-checkbox
             v-model="checkbox"

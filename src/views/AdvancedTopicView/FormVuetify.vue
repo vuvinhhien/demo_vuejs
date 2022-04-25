@@ -36,7 +36,7 @@
         <validation-provider
           v-slot="{ errors }"
           name="email"
-          rules="required|email"
+          rules="required|email|checkEmailExist"
         >
           <v-text-field
             v-model="email"
@@ -85,6 +85,7 @@ import {
   ValidationProvider,
   setInteractionMode,
 } from "vee-validate";
+import instance from "@/configs/axios";
 
 setInteractionMode("eager");
 
@@ -111,6 +112,29 @@ extend("regex", {
 extend("email", {
   ...email,
   message: "Email must be valid",
+});
+
+extend("checkEmailExist", async (value) => {
+  // if (timeout) {
+  //   clearTimeout(timeout);
+  // }
+  // const promise = new Promise()((resolve, reject) => {
+  //   timeout = setTimeout(async () => {
+  try {
+    console.log("hello");
+    const response = await instance.get(`/users?email=${value}`);
+    const { data } = response;
+
+    if (data.length === 0) return true;
+    return "Email already existed";
+  } catch (error) {
+    console.log(error);
+    return "Email already existed";
+  }
+  // }, 500);
+  // });
+  // result = await promise;
+  // return result;
 });
 
 export default {
